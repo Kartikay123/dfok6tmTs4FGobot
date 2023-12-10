@@ -1,0 +1,35 @@
+.conatiner{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+.card {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidate-details {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .candidate-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .candidate-details p {
+    margin: 5px 0;
+  }
+  
+.container-value {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

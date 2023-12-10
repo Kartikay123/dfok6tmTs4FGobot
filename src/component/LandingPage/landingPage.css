@@ -1,0 +1,41 @@
+.land-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Adjust this property to change the space between items */
+    align-items: center;
+    height: 100vh;
+  }
+
+.cta{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.btn {
+    background: #3c4ffc;
+    background-image: -webkit-linear-gradient(top, #3c4ffc, #d9349c);
+    background-image: -moz-linear-gradient(top, #3c4ffc, #d9349c);
+    background-image: -ms-linear-gradient(top, #3c4ffc, #d9349c);
+    background-image: -o-linear-gradient(top, #3c4ffc, #d9349c);
+    background-image: linear-gradient(to bottom, #3c4ffc, #d9349c);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    
+    background: #6534d9;
+    background-image: -webkit-linear-gradient(top, #6534d9, #4e2bb8);
+    background-image: -moz-linear-gradient(top, #6534d9, #4e2bb8);
+    background-image: -ms-linear-gradient(top, #6534d9, #4e2bb8);
+    background-image: -o-linear-gradient(top, #6534d9, #4e2bb8);
+    background-image: linear-gradient(to bottom, #6534d9, #4e2bb8);
+    text-decoration: none;
+  }
+  
