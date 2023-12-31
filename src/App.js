@@ -6,7 +6,7 @@ function App() {
   return (
     <div style={{ background: 'linear-gradient(#8AAAE5, #FFFFFF)', height: '100vh' }}>
       <Routes>
-        <Route path="/dfok6tmTs4FGobot" element={<LandingPage />} />
+      <Route index element={<LandingPage />} />
         <Route path="/bmi-calculation" element={<BmiCalculation />} />
       </Routes>
     </div>
