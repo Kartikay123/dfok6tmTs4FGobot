@@ -1,6 +1,26 @@
 import React, { useState } from 'react';
 import './bmiCalculation.css';
 
+
+const InputField = ({ label, value, onChange, error, type, step, min, max }) => {
+    return (
+        <div>
+            <label>
+                {label}:
+                <input
+                    type={type}
+                    step={step}
+                    min={min}
+                    max={max}
+                    value={value}
+                    onChange={onChange}
+                />
+                {error && <p className="error">{error}</p>}
+            </label>
+        </div>
+    );
+};
+
 const BmiCalculation = () => {
     const [weight, setWeight] = useState('');
     const [height, setHeight] = useState('');
@@ -68,39 +88,29 @@ const BmiCalculation = () => {
             <div className='card-bmi'>
                 <div>
                     <h2>BMI Calculation</h2>
-                    <div>
-                        <label>
-                            Weight (kg):
-                            <input
-                                type="number"
-                                step="0.1"
-                                min="1.0"
-                                max="300.0"
-                                value={weight}
-                                onChange={(e) => setWeight(e.target.value)}
-                            />
-                            {weightError && <p className="error">{weightError}</p>}
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            Height (m):
-                            <input
-                                type="number"
-                                step="0.01"
-                                min="0.1"
-                                max="3.0"
-                                value={height}
-                                onChange={(e) => setHeight(e.target.value)}
-                            />
-                            {heightError && <p className="error">{heightError}</p>}
-                        </label>
-                    </div>
-                    <div>
-                        <div className='button-edit'>
-                            <button onClick={calculateBMI}>Calculate BMI</button>
-                            <button onClick={resetValues}>Reset</button>
-                        </div>
+                    <InputField
+                        label="Weight (kg)"
+                        value={weight}
+                        onChange={(e) => setWeight(e.target.value)}
+                        error={weightError}
+                        type="number"
+                        step="0.1"
+                        min="1.0"
+                        max="300.0"
+                    />
+                    <InputField
+                        label="Height (m)"
+                        value={height}
+                        onChange={(e) => setHeight(e.target.value)}
+                        error={heightError}
+                        type="number"
+                        step="0.01"
+                        min="0.1"
+                        max="3.0"
+                    />
+                    <div className='button-edit'>
+                        <button onClick={calculateBMI}>Calculate BMI</button>
+                        <button onClick={resetValues}>Reset</button>
                     </div>
                     {bmiResult && <p>Your BMI is: {bmiResult}</p>}
                 </div>
